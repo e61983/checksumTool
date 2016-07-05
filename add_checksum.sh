@@ -24,7 +24,7 @@ checksum="$($program $1)"
 checksum=${checksum: -4}
 
 # get the new filename
-new_filename="$1_($checksum)"
+new_filename="${1%.*}($checksum).${1#*.}"
 
 # rename
 mv $1 $new_filename
