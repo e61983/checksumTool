@@ -20,7 +20,7 @@ if ! checksum_program="$(type -p "$program")" || [ -z "$checksum_program" ]; the
 fi
 
 # calcualte checksum
-checksum="$(./checksum.out $1)"
+checksum="$($program $1)"
 checksum=${checksum: -4}
 
 # get the new filename
