@@ -29,7 +29,6 @@ new_filename="${1%.*}($checksum).${1#*.}"
 # rename
 mv $1 $new_filename
 
-echo origin filename: $1
-echo $new_filename
+echo $1 " ---> " $new_filename
 
 exit 0;
