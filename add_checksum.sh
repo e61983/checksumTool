@@ -1,6 +1,6 @@
 #!/bin/bash
 
-program=checksum.out
+program=checksum.exe
 
 # check input name
 if [ -z $1 ]; then
@@ -12,11 +12,6 @@ fi
 if ! [ -e $1 ]; then
     echo $1 is not exist.
     exit 1;
-fi
-
-# check checksum.out is maked.
-if ! checksum_program="$(type -p "$program")" || [ -z "$checksum_program" ]; then
-    make
 fi
 
 # calcualte checksum
